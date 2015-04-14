@@ -1,0 +1,7 @@
+<h1>Available Documents</h1>
+
+<ul>
+	<li ng-repeat="doc in index.docs">
+		<a ng-link="doc({ id: doc.id })">{{ doc.title }}</a>
+	</li>
+</ul>
