@@ -111,7 +111,7 @@ routerFactory.$inject = ["$$rootRouter", "$rootScope", "$location", "$$grammar",
  * ## Use
  *
  * ```html
- * <div router-viewport="name"></div>
+ * <div ng-viewport="name"></div>
  * ```
  *
  * The value for the `ngViewport` attribute is optional.
@@ -260,7 +260,7 @@ var LINK_MICROSYNTAX_RE = /^(.+?)(?:\((.*)\))?$/;
  * Lets you link to different parts of the app, and automatically generates hrefs.
  *
  * ## Use
- * The directive uses a simple syntax: `router-link="componentName({ param: paramValue })"`
+ * The directive uses a simple syntax: `ng-link="componentName({ param: paramValue })"`
  *
  * ## Example
  *
@@ -274,7 +274,7 @@ var LINK_MICROSYNTAX_RE = /^(.+?)(?:\((.*)\))?$/;
  *
  * ```html
  * <div ng-controller="AppController as app">
- *   <a router-link="user({id: app.user.id})">{{app.user.name}}</a>
+ *   <a ng-link="user({id: app.user.id})">{{app.user.name}}</a>
  * </div>
  * ```
  */
@@ -526,7 +526,7 @@ function $componentLoaderProvider() {
     },
 
     /**
-     * @name $componentLoaderProvider#setCtrlNameMapping
+     * @name $componentLoaderProvider#setComponentFromCtrlMapping
      * @description takes a function for mapping component controller names to component names
      */
     setComponentFromCtrlMapping: function (newFn) {
